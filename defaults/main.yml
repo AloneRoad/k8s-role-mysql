@@ -1,0 +1,36 @@
+---
+
+## mysql image version
+## ref: https://hub.docker.com/r/library/mysql/tags/
+##
+mysql_image: mysql:5.7.13
+xtrabackup_image: gcr.io/google-samples/xtrabackup:1.0
+
+mysql_replica_count: 3
+
+## Password for MySQL root user
+##
+mysql_root_password: guano-weak-requiem-puny
+
+## Username/password for MySQL replication user
+##
+mysql_replication_user: repl
+mysql_replication_password: corrode-virgule-random-vaporing
+
+## Create a database user
+##
+mysql_user: user
+mysql_password: tiger-spout-pizzeria-quaff
+
+
+## Allow unauthenticated access, uncomment to enable
+##
+# mysql_allow_empty_password: true
+
+## Create database with name and grant all permissions to user on startup, if needed
+# mysql_database:
+
+mysql_resources:
+  requests:
+    memory: 128Mi
+    cpu: 100m
